@@ -17,7 +17,7 @@ router.post('/crearPersona',(req,res)=>{
 
     })
 }).post('/editarPersona',(req,res)=>{
-    const{_id, dni,names,email,phones,direccion,genero}
+    const{_id, dni,names,email,phones,direccion,genero} =req.body
     persona.updateOne({_id:_id},{$set:{
         dni,names,email,phones,direccion,genero        
     }},(erro,resp)=>{

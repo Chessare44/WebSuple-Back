@@ -1,10 +1,10 @@
-require('./connection/connectionMongo');
+require('./conection/connectionMongo');
 const cors = require('cors');
 const express = require('express');
 const app = express();
 const body_parser = require('body-parser');
-const morgan = require ('morgan');
-const rutas = require('../Router/router');
+const morgan = require ('morgan')
+const rutas = require('./Router/route');
 
 
 app.use(cors());
@@ -16,7 +16,7 @@ app.use(morgan('dev'));
 app.use(rutas)
 
 
-var por = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
 app.listen(port,()=>{
     console.log('conectado al puerto', port);

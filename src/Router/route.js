@@ -1,7 +1,7 @@
 const persona = require('../Controller/persona_controller');
-const {} = require('express');
+const {Router} = require('express');
 const router = Router();
 
 router.use('/Persona',persona);
 
-module.exports = persona
+module.exports = router
